@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.CreateSpends">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        app:title="Add Spends"
+        app:titleTextColor="@android:color/white"
+        android:background="@drawable/shades"
+        android:layout_height="wrap_content">
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <EditText
+        android:id="@+id/spends_for"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:drawableStart="@drawable/align_menu"
+        android:drawablePadding="10dp"
+        android:background="@android:color/transparent"
+        android:hint="What was this spend for?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/darker_gray"
+        android:layout_height="1dp">
+
+    </View>
+    <EditText
+        android:id="@+id/amount"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:drawableStart="@drawable/rupee"
+        android:background="@android:color/transparent"
+        android:hint="Enter Amount"
+        android:drawablePadding="10dp"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/darker_gray"
+        android:layout_height="1dp">
+
+    </View>
+    <EditText
+        android:id="@+id/date"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:drawableStart="@drawable/date"
+        android:background="@android:color/transparent"
+        android:hint="Date"
+        android:drawablePadding="10dp"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/darker_gray"
+        android:layout_height="1dp">
+
+    </View>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:text="Category"
+            android:drawableStart="@drawable/category"
+            android:drawablePadding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TableLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <TableRow>
+                <Button
+                    android:text="Bills"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1" />
+                <Button
+                    android:text="EMI"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2" />
+                <Button
+                    android:text="Food \n&amp; Drinks"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3" />
+                <Button
+                    android:text="Entertaiment"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4" />
+            </TableRow>
+            <TableRow>
+                <Button
+                    android:text="Groceries"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1" />
+
+                <Button
+                    android:text="Health"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2" />
+                <Button
+                    android:text="Investement"
+                    android:layout_width="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3" />
+                <Button
+                    android:text="Shopping"
+                    android:layout_width="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4" />
+            </TableRow>
+
+            <TableRow>
+                <Button
+                    android:text="Transfer"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1" />
+
+                <Button
+                    android:text="Travel"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2" />
+                <Button
+                    android:text="Other"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/darker_gray"
+        android:layout_height="1dp">
+
+    </View>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/save"
+        android:layout_alignParentBottom="true"
+        android:text="save"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+    <Button
+        android:id="@+id/save_another"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="save &amp; Add another"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+</RelativeLayout>
+
+</LinearLayout>

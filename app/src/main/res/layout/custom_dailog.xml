@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:text="Set your monthly budget"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:id="@+id/label_monthly_budget"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/title"
+        android:text="Monthly Budget ₹ "
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/budget_value"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/label_monthly_budget"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="10dp"
+        android:inputType="numberDecimal"
+        android:digits="1234567890"
+        android:maxLength="8"
+        android:layout_height="wrap_content">
+
+    </EditText>
+    <SeekBar
+        android:layout_below="@+id/budget_value"
+        android:id="@+id/dailog_budget_seekbar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:max="200000"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+
+    </SeekBar>
+    <TextView
+        android:layout_below="@+id/budget_value"
+        android:text="0"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:layout_below="@+id/budget_value"
+        android:text="2L"
+        android:layout_alignParentEnd="true"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <Button
+        android:id="@+id/cancel"
+        android:text="Cancel"
+        android:layout_toLeftOf="@+id/set"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <Button
+        android:id="@+id/set"
+        android:text="Set"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@android:color/transparent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+</RelativeLayout>

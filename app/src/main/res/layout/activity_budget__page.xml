@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0C0C0"
+    android:orientation="vertical"
+    tools:context=".Activity.BudgetPage">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/shades">
+
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="February"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/set_budget"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Set Budget"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/rupee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/month"
+            android:layout_marginTop="20dp"
+            android:text="₹"
+            android:textColor="@android:color/white"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/total_spends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/month"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rupee"
+            android:text="100"
+            android:textColor="@android:color/white"
+            android:textSize="50sp">
+
+        </TextView>
+
+        <SeekBar
+            android:id="@+id/spends"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rupee"
+            android:maxHeight="5dp"
+            android:minHeight="5dp"
+            android:padding="10dp"
+            android:progressDrawable="@drawable/seekbar"
+            android:theme="@style/CustomSeekbar">
+
+        </SeekBar>
+
+        <TextView
+            android:id="@+id/safe_to_spend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Safe to spends ₹ 219/day"
+            android:textColor="@android:color/white"
+            android:textSize="18sp">
+
+        </TextView>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/expense">
+
+        </ImageButton>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_below="@+id/relative"
+        android:layout_marginTop="10dp"
+        android:elevation="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Last Month"
+                android:textColor="#606060"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/graphs_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/last"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/graphs">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/mgs_spends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/last"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/graphs_image"
+                android:text="₹ 30,245 Spent"
+                android:textColor="@android:color/black"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mgs_spends"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/graphs_image"
+                android:text="See where you spend in January!"
+                android:textSize="16sp">
+
+            </TextView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/card_view"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/spends_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Spends"
+                android:textSize="18sp">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view_spends"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/spends_label"
+                android:layout_width="match_parent"
+                android:layout_height="230dp" />
+
+            <Button
+                android:id="@+id/more_spends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:text="More Spends"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="18sp">
+
+            </Button>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/card_view2"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_in_card_view3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/reminder_text_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Reminders"
+                android:textSize="18sp">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reminder_text_msg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/clock">
+
+                </ImageView>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bills Reminder Here "
+                    android:textSize="18sp">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="20dp"
+                android:layout_margin="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:src="@android:drawable/ic_input_add" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_toLeftOf="@+id/see_all"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:text="New Reminder"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="18sp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:text="See all"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="18sp">
+
+            </Button>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
